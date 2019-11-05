@@ -1,0 +1,8 @@
+<% @artists.each do |artist| %>
+    <%= link_to artist.name, artist %><br>
+    <p>Songs:</p>
+    <% artist.songs.each do |song| %>
+        <p><%= link_to song.title, song %></p>
+    <% end %>
+    <p><%= artist.name %> has <%= artist.songs.size %> songs</p>
+<% end %>
